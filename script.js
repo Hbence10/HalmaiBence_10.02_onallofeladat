@@ -22,6 +22,9 @@ function addOperation(operationSign) {
     else if (((operation.charAt(operation.length - 1) == "+" && operationSign == "-" && operation.slice(operation.length - 2, operation.length) != "-+") || (operation.charAt(operation.length - 1) == "-" && operationSign == "+" && operation.slice(operation.length - 2, operation.length) != "+-")) && operation.length > 1) {
         operation += operationSign;
     }
+    else if ((operation.charAt(operation.length - 1) == "*" || operation.charAt(operation.length - 1) == "/") && (operationSign == "+" || operationSign == "-")) {
+        operation += operationSign;
+    }
     operationPlace.innerHTML = operation;
 }
 // Amikor a user a vegeredmenyt szeretne megtudni: 

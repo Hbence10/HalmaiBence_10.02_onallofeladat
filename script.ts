@@ -53,7 +53,6 @@ function clearPlace(){
 function backSpace(){
     operation = (operation as string).slice(0, operation.length-1)
     operationPlace.innerHTML = operation
-    
 }
 
 // Ha a user nem szeretne a gombokkal elvegezni a kivant muveletet
